@@ -1,20 +1,32 @@
-@*
- * This template takes a single argument, a String containing a
- * message to display.
- *@
-@(message: String)
+<!DOCTYPE html>
+<html><head>
+   <title> Chat</title>
+   <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/angular_material/1.1.0/angular-material.min.css">
+   <link rel="stylesheet" href="/assets/stylesheets/chat.css">
+</head><body ng-app="chatApp" ng-controller="chatController" layout="row" layout-align="center stretch">    <md-card flex="none" layout="column">
+       <md-content flex="90" style="width:800px; background:url(http://i2.wp.com/www.sooziq.com/wp-content/uploads/2016/09/12.gif); background-size:cover;" id="message-pane">       
+       </md-content>
+       <md-card flex="10" style="margin: 0px" layout="row" layout-align="space-between center" class="md-whiteframe-8dp">
+       <form flex="90" ng-submit="sendMessage()" layout="row">
+               <md-input-container flex="100">
+                   <label>Message</label>
+                   <input ng-model="userMessage">
+               </md-input-container>
+           </form>
+           <md-button flex="10" style="height: 100%; padding: 0px " class="md-icon-button " ng-click="sendMessage() ">
+               <md-icon style="height: 100%; padding: 0px; " md-svg-icon="/assets/images/ic_chat_48px.svg"></md-icon>
+           </md-button>
+       </md-card>
+   </md-card>
 
-@*
- * Call the `main` template with two arguments. The first
- * argument is a `String` with the title of the page, the second
- * argument is an `Html` object containing the body of the page.
- *@
-@main("Welcome to Play") {
-
-    @*
-     * Get an `Html` object by calling the built-in Play welcome
-     * template and passing a `String` message.
-     *@
-    @play20.welcome(message, style = "Java")
-
-}
+   
+   
+   <!-- Scripts -->
+   <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+   <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular.min.js"></script>
+   <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular-animate.min.js"></script>
+   <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular-aria.min.js"></script>
+   <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular-messages.min.js"></script>
+   <script src="https://ajax.googleapis.com/ajax/libs/angular_material/1.1.0/angular-material.min.js"></script>
+   <script src="/assets/javascripts/chat.js"></script>
+</body></html>
