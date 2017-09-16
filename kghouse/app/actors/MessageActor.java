@@ -6,7 +6,7 @@ import akka.actor.UntypedActor;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import data.FeedResponse;
 import data.Message;
-import services.Agentservice;
+import services.AgentService;
 import services.FeedService;
 
 import java.util.Objects;
@@ -22,7 +22,7 @@ public class MessageActor extends UntypedActor
 
     private final ActorRef out;
     private FeedService feedService = new FeedService();
-    private Agentservice agentService = new Agentservice();
+    private AgentService agentService = new AgentService();
 
     public MessageActor(ActorRef out)
     {
