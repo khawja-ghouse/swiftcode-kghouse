@@ -11,7 +11,7 @@ import java.util.concurrent.CompletionStage;
 
 public class Agentservice {
 
-    public AgentResponse getAgentResponce(String text)
+    public AgentResponse getAgentResponse(String text)
     {
       AgentResponse agentResponse = new AgentResponse();
       try {

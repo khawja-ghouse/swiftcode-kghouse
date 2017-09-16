@@ -3,10 +3,29 @@
    <title> Chat</title>
    <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/angular_material/1.1.0/angular-material.min.css">
    <link rel="stylesheet" href="/assets/stylesheets/chat.css">
-</head><body ng-app="chatApp" ng-controller="chatController" layout="row" layout-align="center stretch">    <md-card flex="none" layout="column">
-       <md-content flex="90" style="width:800px; background:url(http://i2.wp.com/www.sooziq.com/wp-content/uploads/2016/09/12.gif); background-size:cover;" id="message-pane">       
+</head>
+<body ng-app="chatApp" ng-controller="chatController" layout="row" layout-align="center stretch">    
+   <md-card flex="none" layout="column">
+      <md-content flex="90" style="width:800px; background-size:cover;background-repeat:no-repeat;
+
+      background:url(https://itmeo.com/public/webgradients_png/069%20Purple%20Division.png);
+      
+      background-position: right bottom;" id="message-pane">  
+          <div ng-repeat="message in messages" layout="column" layout-align="{{message.sender=='BOT' ? 'start start' : 'start end'}}">
+              <md-card style="max-width:75%; border-radius: 10px; padding: 10px; font-size: 14px;" ng-style="message.sender=='BOT'?
+               {'background-color':'#FBF8EF'}:
+               {'background-color':'#FBF8EF'};">
+                <span>{{message.text}}</span>
+                <span ng-bind-html="trust(message.feedResponse.description)">{{message.feedResponse.description}}</span>
+               <span layout-align="end end" style="margin-top: 4px; float: right; color: #666666; font-size: 10px;"> {{message.time}} 
+               </span> 
+              </md-card>
+          </div>
+
+
+         
        </md-content>
-       <md-card flex="10" style="margin: 0px" layout="row" layout-align="space-between center" class="md-whiteframe-8dp">
+       <md-card flex="10" style="margin: 0px; "   layout="row" layout-align="space-between center" class="md-whiteframe-8dp">
        <form flex="90" ng-submit="sendMessage()" layout="row">
                <md-input-container flex="100">
                    <label>Message</label>
