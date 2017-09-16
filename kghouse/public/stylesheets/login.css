@@ -1,0 +1,92 @@
+@import url(https://fonts.googleapis.com/css?family=Raleway:400,200);
+@import url(https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css);
+@import url('https://fonts.googleapis.com/css?family=Shadows+Into+Light');
+@import url('https://fonts.googleapis.com/css?family=Saira+Semi+Condensed');
+* {
+ margin: 0;
+ padding: 0;
+ font-family: 'Shadows Into Light', cursive;
+}
+body {
+ background-image: url('../images/bots.png');
+ background-position: cover;
+ height: 100%;
+ width: 100%;
+ overflow-x: hidden;
+ overflow-y: hidden;
+}.overlay {
+ z-index: 1;
+ opacity: 0.8;
+ background-color: #000;
+ height: 100%;
+ width: 100%;
+ position: fixed;
+ top: 0;
+ left: 0;
+}.leftcontent {
+ z-index: 2;
+ height: calc(100% - 120px);
+ width: calc(100% - 470px);
+ margin-top: 60px;
+ margin-left: 60px;
+ position: fixed;
+ top: 0;
+ left: 0;
+}.ltitle {
+ color: #fff;
+ font-size: 60px;
+ font-weight: 200;
+}.lcontent {
+ color: #fff;
+ font-size: 40px;
+ font-weight: 200;
+}.sidebar {
+ background-color: #000;
+ opacity:0.8;
+ width: 350px;
+ height: 100%;
+ position: fixed;
+ top: 0;
+ right: 0;
+ z-index: 100;
+ padding-top: 60px;
+}.rtitle {
+ color: #fff;
+ font-size: 60px;
+ font-weight: 200;
+ padding-left: 30px;
+}.textinput {
+ margin-left: 35px;
+ height: 40px;
+ border-width: 0;
+ border-style: solid;
+ border-color: #1d1e21
+;
+ border-left-width: 5px;
+ background-color: #eee;
+ width: 270px;
+ padding-left: 10px;
+ font-size : 20px;
+ font-family :'Saira Semi Condensed', sans-serif;
+ outline: 0;
+}.textinput:focus {
+ background-color: #f4f4f4
+;
+}.submit {
+ background-color: #1238e6
+;
+ height: 50px;
+ width: 50px;
+ border-style: solid;
+ border-width: 0;
+ border-radius: 100px;
+ position: fixed;
+ bottom: 30px;
+ right: 30px;
+ color: #fff;
+ outline: 0;
+ cursor: pointer;
+}
+
+
+
